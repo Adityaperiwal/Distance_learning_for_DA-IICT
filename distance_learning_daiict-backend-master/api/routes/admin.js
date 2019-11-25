@@ -22,6 +22,7 @@ router.use('/course',courseRoutes);
 router.use('/inquiry',inquiryRoutes);
 router.use('/complain',complaintRoutes)
 
+//login api
 router.post('/login',function(req,res,next){
     Admin.find({admin_email:req.body.admin_email})
        .exec()
